@@ -24,6 +24,10 @@ async function getJoke() {
 
     jokeEl.innerText = data[0].joke;
   } catch (error) {
+    jokeEl.innerText = "An error happened, try again later";
+
+    btnEl.disabled = false;
+    btnEl.innerText = "Tell me a joke";
     console.log(error);
   }
 }
